@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","/api",false);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4){
+            if(xhr.status==200){
+                alert(xhr.responseText);
+            }
+        }
+    }
+    xhr.send()
+
+
+
+
+
+
+    var a= new XMLHttpRequest();
+    a.open("GET","/xxx",false);
+    a.onreadystatechange=function(){
+        if(a.readyState==4){
+            if(status==200){
+
+            }
+        }
+    }
+    a.send()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var b =new XMLHttpRequest();
+    b.open("POST","/h",false);
+    b.onreadystatechange=function(){
+        if(b.readyState==4){
+            if(b.status==200){
+               // .....
+            }
+        }
+    }
+    b.send();
+</script>
+</body>
+</html>

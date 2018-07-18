@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //函数作为返回值；
+    var a =300;
+    function fn(){
+        var a =100;
+        return function(){
+            alert(a);
+        }
+    }
+    var F1 = fn();
+    F1();
+    //函数作为参数；
+    function fn1(x){
+        var a =200;
+        x();
+    }
+   fn1(F1);
+</script>
+</body>
+</html>

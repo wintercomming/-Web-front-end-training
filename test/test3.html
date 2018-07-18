@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中</title>
+</head>
+<body>
+<style>
+    .father{
+        height:700px;
+        width: 700px;
+        border:1px solid #000000;
+        display: block;
+    }
+    .father:before{
+        content:'';
+        display:inline-block;
+        vertical-align: middle;
+        height:100%;
+    }
+    .son{
+        border:1px solid #000000;
+        width:50px;
+        height:50px;
+        vertical-align: middle;
+        margin:0 auto;
+        text-align: center;
+    }
+</style>
+<div class="father">
+    <div class="son">
+        我是居中元素
+
+    </div>
+</div>
+</body>
+</html>

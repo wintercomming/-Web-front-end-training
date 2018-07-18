@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function child(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    child.prototype.skill=function(){
+        alert("i am very happy");
+    }
+    var fn = new child("jack","18");
+    fn.printname = function () {
+        alert("i am jack");
+    }
+    fn.printname();
+    fn.skill();
+    alert(fn.__proto__===child.prototype);
+</script>
+</body>
+</html>
