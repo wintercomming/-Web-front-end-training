@@ -1,0 +1,3 @@
+事件同时绑定多个标签，可以绑定多个事件，还可以解绑：可以用addEventListener
+语法：xxxDomObject.addEventListener('事件'，函数，冒泡/捕捉)；
+他的事件名一律不带on

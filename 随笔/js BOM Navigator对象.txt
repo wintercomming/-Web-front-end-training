@@ -1,0 +1,5 @@
+Navigator对象
+这个对象提供了浏览器和系统的信息
+Navigator对象的appCodeName获得浏览器的名称
+appName获取完整的浏览器名称
+Navigator对象的userAgent：用来识别浏览器名称，版本，引擎以及操作系统等信息的内容

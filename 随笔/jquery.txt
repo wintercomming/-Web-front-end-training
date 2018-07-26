@@ -1,0 +1,11 @@
+jquery2.0版本不兼容ie6~8；
+CDN内容分发网络
+$符号代表了jquery对象；
+可以使用cdn直接用库；
+
+
+链式语法
+
+
+
+$(document).ready(function(){...});

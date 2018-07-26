@@ -1,0 +1,46 @@
+[+]
+
+在js中，所有的函数再被调用的时候都会默认传入两个参数，一个是this，还有一个是arguments。在默认情况下this都是指当前的调用函数的对象。但是有时候我们需要改变this的指向，也就是说使函数可以被其他对象来调用，那么我们应该怎样做呢？这时候我们就可以使用call,apply和bind方法了。
+
+1.首先搞清楚call，apply和bind方法的来历
+在js中所有的函数都是Function的实例，而且对于Function来说，它的原型即Function.prototype中含有很多东西，其中call,apply和bind方法就是Function原型中的方法，所以根据原型的规则，所有的函数都可以使用原型中属性和方法，所以来说，对于所有的函数都可以使用call，apply和bind方法。
+简单一句话：call，apply和bind都是Function原型中的方法，而所有的函数都是Function的实例。
+2.抛出一个概念，就是call，apply和bind方法到底有什么作用？
+我认为它们的作用可以用一句话来描述：就是改变this的指向。对于这句话的解释，我们可以结合代码来理解
+3.结合代码理解改变this的指向的含义
+[html] view plain copy
+<script type="text/javascript">  
+    function show(sex){  
+        console.log("普通函数"+sex);  
+    }  
+    var person={  
+        name:"aa",  
+        age:14  
+    };  
+    show.call(person,"男");  
+</script>  
+
+在上面的代码块中，我们可以看到person对象并没有show方法，但是我们可以通过call方法来实现person对象来调用show方法。所以这种情况我认为就是改变了this的指向。
+同样的，apply和bind方法也可以实现上述的功能，那么它们三个有什么区别呢？
+4.call,apply和bind的区别
+它们在功能上是没有区别的，都是改变this的指向，它们的区别主要是在于方法的实现形式和参数传递上的不同
+①：函数.call(对象,arg1,arg2....)
+②：函数.apply(对象，[arg1,arg2,...])
+③：var ss=函数.bind(对象,arg1,arg2,....)
+我们通过代码来更加明显的区别一下：
+[html] view plain copy
+<span style="white-space:pre;"> </span><script type="text/javascript">  
+        function show(sex){  
+            console.log("普通函数"+sex);  
+        }  
+        var person={  
+            name:"aa",  
+            age:14  
+        };  
+        show.call(person,"男");  
+        show.apply(person,["女"]);  
+        //对于bind来说，用法更加的灵活  
+        var ss=show.bind(person,"不明");  
+        ss();  
+    </script>  
+通过观察上面的代码，很明显的就可以得出它们三者的区别，仅仅是函数传递的不同以及bind方法可以更加的方便的使用

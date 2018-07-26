@@ -1,0 +1,96 @@
+第壹章
+javascript由三部分组成
+1.ECMAscript（提供核心语言功能），
+2.DOM（文档对象模型，定义访问和操作文档的类型和接口），
+3.BOM（提供浏览器交互的方法和接口）。
+
+第二章
+doctype声明类型的两种模式
+混杂模式和标准模式
+混杂模式会使ie的模式更接近ie5而标准模式使得其更接近标准行为
+在script标签里面的defer属性如设置defer=“defer”则表示延迟脚本，
+表示脚本会延迟到</html>后执行。defer属性只适用于外部脚本。
+async属性表示异步处理，指定async是为了不让页面等待所有脚本下载之后运行，
+<script async src=“”>
+用CDdata块来包含javascript代码解决代码无法在xhtml里运行
+用<noscript>标签来指定无法运行脚本的浏览器所输出的内容
+一般把javascript脚本放在页面最后面，即</body>前面，以便让浏览器先加载html文件，再加载javascript脚本，提高用户的体验。
+
+第三章
+ECMAscript区分大小写，意味着变量test和Test是两个不同的变量
+标识符命名规范：
+1.第一个字母：只能是字母，下划线或美元符号；
+2.其他字母可以是字母，下划线，美元符号或者数字。
+ECMAscript标识符通常采用驼峰大小写格式：第一个字母小写，其他任意一个有意义的单词首字母大写
+
+ECMAscript注释：采用c风格，即：
+单行注释：//注释内容
+块级注释：/*
+           *这
+           *是
+           *注释内容
+           */
+
+严格模式：在严格模式下会对ECMAscript的一些不确定行为进行处理，对某些不安全的行为会抛出异常
+严格模式启用：在顶部添加“use strict”的代码。
+分号在ECMAscript代码里面并不是必须的，但是尽可能的加上避免不可预知的错误。
+ECMAscript有五种简单数据类型：
+undefined null boolean number string
+一种复杂数据类型：
+object
+
+typeof操作符;
+检测给定变量的数据类型
+对一个值使用typeof操作符可能返回下列字符串
+undefined 这个值未定义
+boolean 这个值是布尔值
+string 这个值是字符串
+number 这个值是数值
+object 这个值是对象或null
+function 这个值是函数
+
+undefined类型
+使用var声明变量却为对其加以初始化时，其值就是undefined；
+这个值是为了区分空指针对象和未经初始化的变量
+typeof一个未初始化或未声明的变量都会返回undefined值。
+
+null类型
+null值表示一个空对象指针
+如果定义的变量准备在将来用于保存对象，那么最好将该变量初始化为null
+typeof null值会返回“object”
+undefined值是派生与null值得
+对没有赋值的应该明确的让变量保存null值。
+
+boolean类型
+boolean表面值ture和false是区分大小写的，也就是说，ture和false都不是boolean值而是标识符
+可以用Boolean（i）的方法将i转换为boolean值
+
+number类型
+即数值，
+八进制在严格模式下会抛出错误
+1.浮点数据
+该数值中必须包含一个小数点，并且小数点后面必须至少一位数字
+保存浮点数所占用的内存空间是证书值的两倍
+e表示法：
+76e7 = 76 * 10的7次方
+ECMAscript有取值范围，超出范围则显示为infinity或者-indentify
+
+NaN
+即非数值
+任何涉及nan的操作都会返回nan
+
+数值转换
+三个函数：
+Number（） parseInt（） praseFolat（）
+Number（）函数的转换规则
+1.如果是布尔值，true和false将被转换成1和0
+2.数字去掉前面的0
+3，null返回0
+4.undefined返回NaN
+5.字符串
+数值和浮点会原样转换，16进制会改为10进制
+空字符串则为0，其他的则为NaN值
+
+string类型
+字符字变量
+也叫转义序列，用于表示非打印字符或者有其他用途的字符

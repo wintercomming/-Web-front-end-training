@@ -1,0 +1,11 @@
+基本的样式清除：  *{margin:0;padding:0}
+
+无序列表圆点去除： ul{list-style:none}
+
+下划线去除：   a{text-decoration:none}
+
+文本缩进标签 text-indent 不会影响总体宽度（padding会）
+
+需要将a标签设置为块元素，才能设高宽、hover效果   代码：a{display:block}
+
+hover格式   a:hover{}

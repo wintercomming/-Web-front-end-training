@@ -1,0 +1,87 @@
+css由两部分组成
+选择器和声明；
+声明又分为属性和值；
+css样式
+行内样式
+内部样式表
+外部样式表（link href  rel   type）；
+导入式（@import）；
+
+标签.class 特殊的类选择器；
+同一个标签可以设置多个类，类与类之间用空格隔开（不能写两次class）；
+一个标签不能够设置两个id；
+class和id值区分大小写；
+*{}全局选择器；
+伪类选择器
+链接伪类
+：link   未访问的链接
+：visited 已访问的链接
+：hover 鼠标悬停状态
+：active 激活的链接
+
+后代选择器具有优先级，就近原则失效
+ie6及更高版本
+支持<a>元素的四种状态
+ie6不支持其他元素的hover和active
+
+链接伪类的顺序link>visited>hover>active
+伪类名称对大小写不敏感
+
+并不是所有属性都可以从父元素那里继承的，例如border
+在ie6以下的版本，表格不会继承父元素的属性
+解决方式为在选择器里面加上表格；
+<h1>的字体为其父元素继承的两倍。
+
+
+样式层叠
+在无样式的冲突时，多个样式会一起使用
+在样式冲突时，根据就近原则和内外优先级判断哪个样式可以得到应用
+
+
+css优先级
+1.id选择器>class选择器>标签选择器；
+选择器权值：
+标签选择器权值为1
+类和伪类选择器：10
+id选择器：权值为100
+通配符选择器：权值0
+行内样式：权值1000
+同一样式表中：
+1.权值相同
+就近原则
+2.权值不同
+根据权值来判断css样式
+总权指=分权值*个数；
+在样式里面可以添加!important来调整优先级
+
+css命名规范
+采用英文字母数字及_和-命名
+以小写字母开头，不能以数字和-_开头
+命名要有意义
+
+
+
+常见命名
+页头：header 导航：nav 页面主题：main 侧栏：sidebar
+页尾：footer 栏目：column 内容：content 页面外围控制：wrapper
+容器：container 左右中：left right center
+ 
+
+导航部分命名规范
+导航：nav 左导航：leftsidebar 主导航：subnav 右导航：rightsidebar
+子导航：subnav 菜单：menu 顶导航：topnav 子菜单：submenu 
+边导航：sidebar 子菜单：submenu 标题：title 摘要：summary
+
+功能部分命名规范
+标志：logo 注册：regisiter 广告：banner 搜索：search 登陆：login
+功能区：shop 登陆条：loginbar 标题：title
+
+
+id不要滥用，谨慎使用，id是唯一的，当我们不清楚一个元素需要耗去多少资源时，尽量少用id，而且后面的js需要通过id进行操作
+适当使用class
+
+
+
+
+
+

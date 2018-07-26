@@ -1,0 +1,6 @@
+入门：《深入浅出JavaScript》《JavaScript DOM编程艺术》《JavaScript DOM高级程序设计》进阶：《ppk谈JavaScript》《精通JavaScript》《JavaScript高级程序设计》高级：《JavaScript语言精粹》《JavaScript设计模式》《Secrets of the JavaScript Ninja》《高性能JavaScript》
+
+作者：寸志
+链接：https://www.zhihu.com/question/19666184/answer/12593810
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

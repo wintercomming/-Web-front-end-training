@@ -1,0 +1,62 @@
+语法：<tag 事件= "执行脚本"></tag>tag指标签
+用于在html上绑定事件
+onload：页面加载时触发
+onclick：鼠标点击时触发
+onmouseover：鼠标滑过时触发
+onmouseout：鼠标离开时触发
+onfoucs：获得焦点时触发
+onblur：失去焦点时触发
+onchange：域的内容改变时发生
+onsubmit：表单中的确认按钮被点击时发生（不是加在按钮上，而是加在form标签上的）
+onmousedown：鼠标在元素上按下时触发
+onmousemove：鼠标移动时发生（可以用于鼠标图像特效）
+onmouseup：在鼠标上松开鼠标按钮时触发
+onresize：调整浏览器窗口大小时触发
+onscroll：拖动滚动条滚动时触发
+
+
+在事件触发的函数中，this是对该dom对象的引用，即在事件括号里面添加this，会传到js中
+
+
+dom0级事件
+例如通过改变类名的形式
+例子：先创造两个类的css
+然后通过onclick事件使标签的类名发生变化，进而变化其样式
+代码如下：
+//获取按钮
+var btn=document.getElementById("btn");
+//给按钮绑定事件，this是对该dom元素的引用
+btn.onlick=function(){
+    this.className="unclock"
+//改变按钮文字
+    this.innerHTML="解锁"
+//判断如果按钮为锁定，点击则为解锁。如果按钮为解锁，点击为锁定
+//第一种方法：判断class
+if（this.className=="lock"）{
+    this.className="unlock";
+    this.innerHTML="解锁";
+}
+else{
+this.className="lock";
+ this.innerHTML="锁定";
+}
+//通过判断按钮value来改变；
+if（this.innerHTML=="锁定"）{
+this.className="unlock";
+ this.innerHTML="解锁"
+
+}
+else{
+this.className="lock";
+this.innerHTML="锁定"
+}
+
+这种情况不建议用HTML事件，因为要绑定多个函数，
+而且不建议在html里面写js代码。
+
+window.onload=function(){
+}
+
+unload页面卸载
+
+html的placeholder=""引号里面的东西指表单里面灰色的提示信息

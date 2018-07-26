@@ -1,0 +1,121 @@
+字体：font-family
+文字大小：font-size
+文字颜色：font-color
+文字粗细：font-weight
+文字样式：font-style
+
+第一个是指定字体：
+.youclass{font-family:文鼎POP;}
+此处 font-family 指定字体为 文鼎POP ，但电脑上没装 文鼎POP 字体的人看网页，将看不到这个字体效果，任看到电脑上默认的 宋体 或 微软雅黑体，因此针对中文操作系统来说：为保证网页效果，通常只能指定：宋体、黑体、微软雅黑之类的系统上默认自带的字体。
+第二个 font-face 的用法是载入一个字体：
+@font-face { font-family:comic;src:url(http://url/文鼎POP.eot); } 
+将 文鼎POP 的 .eot 格式文件传到服务器上，然后用 font-face 加载到网页中，别人电脑没装这个字体，但用 font-face 加载后同样能在网页上显示出文鼎POP的效果。
+
+font-family后如果接多个字体，会逐次往下找字体的有无，如若全找不到，会用浏览器的默认字体。
+
+当引号嵌套时，内层用单引号
+
+
+字体集种类：
+serif
+sans-serif
+monospace
+cursive
+fantasty
+
+字体集在font-family后直接添加即可
+例如p{font-family："微软雅黑"；san-serif}；
+
+一般浏览器默认字体大小为16px
+font-size有绝对单位和相对单位；
+如绝对单位cm mm in pt pc等
+相对单位则有xx-small x-small small medium large与small一样有三个
+larger是相对于父元素变大，smaller指相对于父元素变小
+em代表相对于父元素的倍数
+例如
+：父元素50px，子元素字体大小等于2em即为100px；
+字体还可以用百分比表示
+
+
+rgb指三原色，r-red，g-green，b-blue；
+其三个数值取值范围为0~255,或者0~100%；
+
+16进制表示颜色#开头，取值范围0~F如果为#080计算机识别为#008800；
+
+font-weight设置文本粗细
+有normal bold bolder lighter等四个属性
+可以设置100~900px
+normal 正常值
+bold   加粗
+bolder  更粗
+lighter  更细
+常用的是bold
+
+font-style设置文字样式
+有三个属性normal italic oblique
+normal正常
+ltalic斜体
+oblique倾斜
+
+font-variant字体变形
+设置元素中文本为小型大写字母
+属性有normal 和 small-caps
+normal正常
+small-caps小型大写字母（将小写字母转换成大写字母，并变小）
+
+
+
+text-align属性有四个
+left right center justify
+（值 justify 可以使文本的两端都对齐。在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。）
+
+
+vertical-align属性
+设置元素内容的垂直方式（对行内元素才生效，对块级元素不生效）
+
+第一种：baseline  sub（下标，类似于平方的样式）  super（上标）  top  
+text-top  middle bottom  text-bottom
+
+
+第二种：长度  百分比
+
+文字基线是指四线三格的第三条线
+top在最上面
+text-top指与顶线对齐
+middle和中线对齐
+baseline与基线对齐
+
+
+垂直居中应用
+单行文字垂直居中：line-height设置与元素高度相同
+或者text-align为center
+
+display：table-cell使块级元素能够转换成单元格元素
+从而能够使用单行元素的垂直居中方法（line-height设置与元素高度相同）
+实现多行垂直居中，而且这个解决办法必须给予其父元素
+
+行高（行与行之间的距离）的设置
+line-height设置行高
+可以为数值和百分比
+行高小于字体大小
+就会重叠，以为不够高
+所以最好以em和百分比来设置
+
+text-indent首行缩进
+
+word-spaceing设置元素内单词之间的间距
+
+letter-spaceing设置元素内字母之间的间距
+ 
+text-transform 设置元素内文本大小
+有四个值
+capitalize（首字母大写） uppercase（大写） lowercase（小写） none
+
+text-decoration设置元素内文本装饰
+四个值
+underline（下划线） overline（上划线） line-through（贯穿线）
+ blink（闪烁效果） none（无任何效果，通常用来清除a标签下划线）
+
+
+
+

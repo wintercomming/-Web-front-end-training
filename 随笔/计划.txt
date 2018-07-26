@@ -1,0 +1,20 @@
+计划
+1
+javascript高级 正则 3-21~4-21 期间可以预习下面几部分
+
+2
+css3 html5 less sass bootstrap webpeak grunt gulp 4-21~5-21
+基础java
+
+3
+es6 node.js 5~21-6~21 
+ssh初级 ajax
+
+
+echarts
+
+根据以上可以先创建个人博客
+
+4
+vue react暑假
+

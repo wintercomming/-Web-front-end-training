@@ -1,0 +1,7 @@
+history对象保存了用户在浏览器中访问页面的历史记录
+history.back()
+回到历史记录shangyibu
+相当于使用了history.go(-1)
+
+
+hostory.forward()
